@@ -101,7 +101,7 @@
 <meta property="og:image" content="http://yoursite.com/2017/11/22/react-antd/image/8.png">
 <meta property="og:image" content="http://yoursite.com/2017/11/22/react-antd/image/9.png">
 <meta property="og:image" content="http://yoursite.com/2017/11/22/react-antd/image/19.png">
-<meta property="og:updated_time" content="2017-11-22T13:31:52.420Z">
+<meta property="og:updated_time" content="2017-11-23T02:35:30.712Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react+antd">
 <meta name="twitter:description" content="基于HapCloud+React+Mobx+Antd的前端实战开发总结        作者：江文     写作日期：2017/8/6   QQ：512035611   Email:wen.jiang@hand-china.com      ​  Notes:本文档比较粗浅 仅供参考  谢谢阅读    [TOC] 1. 前言React是facebook开源的前端开发框架，Antd则是阿里巴巴蚂蚁金">
@@ -347,6 +347,17 @@
 
           
           
+             <span id="/2017/11/22/react-antd/" class="leancloud_visitors" data-flag-title="react+antd">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
@@ -399,6 +410,7 @@
 <p>[TOC]</p>
 <h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h1><pre><code>React是facebook开源的前端开发框架，Antd则是阿里巴巴蚂蚁金服封装的一套开源UI框架 适用于企业中台管理系统的开发,Mobx则是一种前端存储和更新应用状态的解决方案。
 </code></pre><p>​    进行这样的开发需要有js基础，熟悉commonJS等模块规范，熟悉ES6语法及其特性，熟悉JSX规范，熟悉React的组件概念，生命周期，了解React-Router，了解Mobx,等等，后面我会对这部分进行一个最小化归纳，即完成这样的web应用需要的最小化知识结构，以方便快速上手。</p>
+<a id="more"></a>
 <h1 id="2-路由配置"><a href="#2-路由配置" class="headerlink" title="2.路由配置"></a>2.路由配置</h1><p>​    HapCloud采用react-router进行路由管理，实际上只能用它，React官方维护,通过管理 URL，实现组件的切换和状态的变化。</p>
 <h2 id="2-1项目路由配置"><a href="#2-1项目路由配置" class="headerlink" title="2.1项目路由配置"></a>2.1项目路由配置</h2><p>​    在HapCloud中，每个前端项目都有自己的路由，路径一般在 <code>项目名/src/项目名/hdip/containers/***Index.js</code>中,下图是项目路由示例IAMIndex.js,示例代码均不完整，仅供解释.</p>
 <p>​    asyncRouter和asyncLocaleProvider利用了Rx.js，实现多语言以及数据仓库Mobx组件的异步加载，Rx.js解决异步场景的复杂需求，即前端交互中接口请求、浏览器事件以及自定义事件，有对Rx.js感兴趣的小伙伴可以看下面几个地址：</p>
@@ -566,6 +578,11 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="uyan_frame"></div>
+    </div>
 
   
 
@@ -849,6 +866,27 @@
 
 
   
+    
+
+    
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2149564"></script>
+      <!-- UY END -->
+    
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
 
 
 
@@ -860,20 +898,114 @@
 
 
 
-
-
-
-
-
-
-
   
 
-
-
-
-
   
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("v4JE8i7TQTcxtnRnDueGcvHk-gzGzoHsz", "tRyDRGc9wFKp5a5zb5BTCar2");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
