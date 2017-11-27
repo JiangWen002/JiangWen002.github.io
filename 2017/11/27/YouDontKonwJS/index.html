@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo32.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo16.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="javascript," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Github开源的书籍，对JS的深入程度很高的一本书，用于提升对js语法的理解等级。对于想深入理解js语法的同学来说特别有效。">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="你不知道的JavaScript(上) 概览 附网盘链接">
+<meta property="og:url" content="http://www.jiangwen.site/2017/11/27/YouDontKonwJS/index.html">
+<meta property="og:site_name" content="Jiang Wen">
+<meta property="og:description" content="Github开源的书籍，对JS的深入程度很高的一本书，用于提升对js语法的理解等级。对于想深入理解js语法的同学来说特别有效。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://www.jiangwen.site/2017/11/27/YouDontKonwJS/imge1.png">
+<meta property="og:image" content="http://www.jiangwen.site/2017/11/27/YouDontKonwJS/image2.png">
+<meta property="og:updated_time" content="2017-11-27T12:51:06.604Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="你不知道的JavaScript(上) 概览 附网盘链接">
+<meta name="twitter:description" content="Github开源的书籍，对JS的深入程度很高的一本书，用于提升对js语法的理解等级。对于想深入理解js语法的同学来说特别有效。">
+<meta name="twitter:image" content="http://www.jiangwen.site/2017/11/27/YouDontKonwJS/imge1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.jiangwen.site/2017/11/27/YouDontKonwJS/"/>
+
+
+
+
+
+  <title>你不知道的JavaScript(上) 概览 附网盘链接 | Jiang Wen</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jiang Wen</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">Cassini-Huygens</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.jiangwen.site/2017/11/27/YouDontKonwJS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="江文">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/weixin.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jiang Wen">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">你不知道的JavaScript(上) 概览 附网盘链接</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-27T10:43:12+08:00">
+                2017-11-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/前端/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/11/27/YouDontKonwJS/" class="leancloud_visitors" data-flag-title="你不知道的JavaScript(上) 概览 附网盘链接">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center"><p>Github开源的书籍，对JS的深入程度很高的一本书，用于提升对js语法的理解等级。对于想深入理解js语法的同学来说特别有效。 </p>
+</blockquote>
+<span itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/2017/11/27/YouDontKonwJS/imge1.png" class="full-image" alt="alt" title="title"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
+<a id="more"></a>
+<blockquote>
+<p>话不多说，先把这一系列的电子书链接贴上 (中文版的，原版英文在git上，地址:<a href="https://github.com/getify/You-Dont-Know-JS" target="_blank" rel="noopener">https://github.com/getify/You-Dont-Know-JS</a> )<br><div class="note success"><p>链接：<a href="http://pan.baidu.com/s/1qYIAX9U" target="_blank" rel="noopener">http://pan.baidu.com/s/1qYIAX9U</a> 密码：kxnm </p></div></p>
+</blockquote>
+<hr>
+<h1 id="写在前面的一些话"><a href="#写在前面的一些话" class="headerlink" title="写在前面的一些话"></a>写在前面的一些话</h1><p>作为一门计算机语言，最好不要对相关语法奉为圭臬，那种在语法层面，写一大堆合法，却难懂得代码，我觉得意义是真的不大，<br>当然了，在某些情况下，用复杂语法少量代码完成很有意义的动作，就是我们追求的目标了。</p>
+<hr>
+<h1 id="JS引擎-Engine"><a href="#JS引擎-Engine" class="headerlink" title="JS引擎 Engine"></a>JS引擎 Engine</h1><p>JavaScript解析引擎就是能够“读懂”JavaScript代码，并准确地给出代码运行结果的一段程序。比方说，当你写了 var a = 1 + 1; 这样一段代码，JavaScript引擎做的事情就是看懂（解析）你这段代码，并且将a的值变为2。<br>​     学过编译原理的人都知道，对于静态语言来说（如Java、C++、C），处理上述这些事情的叫<strong>编译器（Compiler）</strong>，相应地对于JavaScript这样的动态语言则叫<strong>解释器（Interpreter）</strong>。这两者的区别用一句话来概括就是：<strong>编译器是将源代码编译为另外一种代码（比如机器码，或者字节码），而解释器是直接解析并将代码运行结果输出</strong>。</p>
+<p>​    但是，现在很难去界定说，JavaScript引擎它到底算是个解释器还是个编译器，因为，比如像V8（Chrome的JS引擎），它其实为了提高JS的运行性能，在运行之前会先将JS编译为本地的机器码（native machine code），然后再去执行机器码（这样速度就快很多），这里就用到了<strong>JIT（Just In Time Compilation）</strong>，即会一边编译代码，一边执行代码。</p>
+<p>​    所以，js引擎这个定义不好说，简单点说，就是从头到尾负责整个JS程序的编译及执行动作。那么这么定义的话，编译器，解释器，作用域等等都属于js引擎的范畴。</p>
+<p>​    JavaScript引擎是浏览器的组成部分之一。因为浏览器还要做很多别的事情，比如解析页面、渲染页面、Cookie管理、历史记录等等。那么，既然是组成部分，因此一般情况下JavaScript引擎都是浏览器开发商自行开发的。比如：IE9的Chakra、Firefox的TraceMonkey、Chrome的V8等等。</p>
+<h2 id="JavaScript解析引擎与ECMAScript是什么关系"><a href="#JavaScript解析引擎与ECMAScript是什么关系" class="headerlink" title="JavaScript解析引擎与ECMAScript是什么关系"></a>JavaScript解析引擎与ECMAScript是什么关系</h2><p>ECMAScript是一套语法规则，而JavaScript解析引擎是一段程序，是来实现这套规则的。</p>
+<h2 id="js引擎的LHS和RHS动作"><a href="#js引擎的LHS和RHS动作" class="headerlink" title="js引擎的LHS和RHS动作"></a>js引擎的LHS和RHS动作</h2><p>​    就我目前了解的来看，我觉得这个没有理解的必要。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="number">2</span>;  <span class="comment">//典型LHS引用</span></span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">//典型RHS引用</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>区分LHS和RHS的重要性在于：变量还没有声明（即任何作用域中都无法找到该变量）的情况下，二者行为是不同的。</strong></p>
+<p>​    如果RHS 查询在所有嵌套的作用域中遍寻不到所需的变量,引擎就会抛出 ReferenceError 异常。值得注意的是,ReferenceError 是非常重要的异常类型。相较之下,当引擎执行 LHS 查询时,如果在顶层(全局作用域)中也无法找到目标变量,全局作用域中就会创建一个具有该名称的变量,并将其返还给引擎,前提是程序运行在非 “严格模式”下。</p>
+<h2 id="js编译器-Compiler"><a href="#js编译器-Compiler" class="headerlink" title="js编译器 Compiler"></a>js编译器 Compiler</h2><p>​    定义 ：负责语法分析及代码生成。<br>这部分各个浏览器厂商开发的js引擎中都会有，想看懂这部分内容，就要具备编译原理，操作系统，算法等扎实基础了。<br>一段源码在执行之前会经历三个基本步骤，既“编译”：</p>
+<ul>
+<li>分词/词法分析(Tokenizing/Lexing)</li>
+<li>解析/语法分析(Parsing)</li>
+<li>代码生成<br>当然 实际情况远比这复杂，这里就不讨论了</li>
+</ul>
+<hr>
+<h1 id="作用域和闭包"><a href="#作用域和闭包" class="headerlink" title="作用域和闭包"></a>作用域和闭包</h1><h2 id="作用域定义"><a href="#作用域定义" class="headerlink" title="作用域定义"></a>作用域定义</h2><p>​    定义：负责收集并维护由所有声明的标识符组成的一系列查询，并实施一套非常严格的规则，确定当前执行的代码对这些标识符的访问权限。</p>
+<p>程序员在实际编码过程中就会经常和作用域以及语法打交道了；</p>
+<h3 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h3><p>要明白作用域链，先理解下<code>作用域嵌套</code>,当一个块或函数嵌套在另一个块或函数中时，这就发生了作用域的嵌套。<br><img src="image2.png" alt="作用域嵌套"><br>那么，有了这种嵌套，自然就有了作用域链的存在，所谓作用域链就是，在发生嵌套的时候，当前作用域无法找到某个变量(包括函数)，引擎就会在嵌套外层的作用域继续查找，找不到，继续去外层找，直到找到该变量，或者抵达全局作用域。<br>而在这个过程中，就会产生遮蔽效应，即本层作用域定义的变量，会覆盖上一层作用域定义的同名变量。</p>
+<h2 id="词法作用域-Lexical"><a href="#词法作用域-Lexical" class="headerlink" title="词法作用域 Lexical"></a>词法作用域 Lexical</h2><p>作用域之前已经定义过了，即是一套规则，引擎依据这套规则在作用域链中寻找正确的变量。<br>目前，作用域有两套工作模型：1.词法作用域 2.动态作用于（Bash，Perl脚本），js采用了前者。<br>词法作用域定义：在词法阶段的作用域，即作用域由你写的代码的变量和块作用域的位置而决定。</p>
+<h3 id="欺骗词法"><a href="#欺骗词法" class="headerlink" title="欺骗词法"></a>欺骗词法</h3><p>词法作用域在运行时被“修改”。</p>
+<ul>
+<li>eval(str)<br>参数为字符串，并在eval处把这段字符串作为js代码执行，由于参数可以动态生成，在这里，词法作用域变得不可控，所以，使用eval要及其谨慎。</li>
+<li>with(obj){}<br>这个在严格模式下是被禁止使用的，而eval则被限制使用了。<br>以上两个语法都会拖慢性能。</li>
+</ul>
+<h2 id="函数作用域和块作用域-Function-vs-Block"><a href="#函数作用域和块作用域-Function-vs-Block" class="headerlink" title="函数作用域和块作用域 Function vs. Block"></a>函数作用域和块作用域 Function vs. Block</h2><h3 id="函数作用域定义"><a href="#函数作用域定义" class="headerlink" title="函数作用域定义"></a>函数作用域定义</h3><p>定义 ： 属于这个函数的全部变量都可以在整个函数的范围内使用及复用（在嵌套的作用域中也可以使用，结合作用域链）。<br>这意味着 那些在整个作用域范围内能被访问的变量，要细心处理，因为，一旦嵌套增多，工程复杂，会带来意想不到的问题，且处理起来也比较麻烦。</p>
+<h3 id="隐藏内部实现"><a href="#隐藏内部实现" class="headerlink" title="隐藏内部实现"></a>隐藏内部实现</h3><p>实际上就是利用函数封装一些变量和函数，使被封装的变量和函数外界无法访问。</p>
+<h3 id="规避冲突"><a href="#规避冲突" class="headerlink" title="规避冲突"></a>规避冲突</h3><p>这个很好理解，我们“隐藏”内部实现，就是为了防止变量标识符的冲突。<br>1.全局命名空间<br>第三方库都妥善地将内部私有函数或变量隐藏起来，而暴露一个独特的对象。<br>2.模块管理<br>利用js的语法特性，可以实现现代的模块机制，即任何库都无需将标识符加入到全局作用域中， 而是通过依赖管理器的机制将库的标识符显式地导入到另外一个特定的作用域中。<br>这个后面再讨论。</p>
+<h3 id="函数作用域"><a href="#函数作用域" class="headerlink" title="函数作用域"></a>函数作用域</h3><h4 id="立即执行函数表达式"><a href="#立即执行函数表达式" class="headerlink" title="立即执行函数表达式"></a>立即执行函数表达式</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">2</span>;</span><br><span class="line">(<span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">3</span>;</span><br><span class="line"><span class="built_in">console</span>.log( a ); <span class="comment">// 3</span></span><br><span class="line">&#125;)();</span><br><span class="line"><span class="built_in">console</span>.log( a ); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+<p>利用(function(){})(parms)可以立即创建函数并执行，这就避免了这个函数标识符的变量污染。</p>
+<h4 id="匿名和具名"><a href="#匿名和具名" class="headerlink" title="匿名和具名"></a>匿名和具名</h4><p>匿名函数调试困难，可读性差，尽量使用具名函数</p>
+<h3 id="块作用域"><a href="#块作用域" class="headerlink" title="块作用域"></a>块作用域</h3><p>场外吐槽:没想到ES6才用let给块作用域提供了更便捷的解决方式</p>
+<p>请看如下代码:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">   <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++) &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log( i );<span class="comment">//11</span></span><br><span class="line"><span class="keyword">var</span> foo = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">if</span> (foo) &#123;</span><br><span class="line"><span class="keyword">var</span> j = <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log( j );<span class="comment">//2</span></span><br></pre></td></tr></table></figure></p>
+<p>for以及if中定义的变量i,j竟然泄露到外面的作用域了！！</p>
+<h4 id="let"><a href="#let" class="headerlink" title="let"></a>let</h4><p>我们显然不想看到变量泄露这种情况发生，那么在ES6(js2015规范)中使用let 定义i,j，就可以杜绝这种情况发生，ES6之前也可以实现，但不谈论，过时了<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">   <span class="keyword">for</span> (<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++) &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log( i );<span class="comment">//Uncaught ReferenceError: i is not defined</span></span><br></pre></td></tr></table></figure></p>
+<p>1.如上所见，let将变量绑定在了当前的块级作用域中了<br>2.let不会变量提升<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="built_in">console</span>.log( bar ); <span class="comment">// ReferenceError!</span></span><br><span class="line"><span class="keyword">let</span> bar = <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>3.let循环<br>这可以解决闭包中一些恼人的问题，详情见闭包部分。<br>4.</p>
+<h4 id="块"><a href="#块" class="headerlink" title="块{}"></a>块{}</h4><p>像for(){}，if(){} 就包含块级作用域，那么我们也可以显式创建块级作用域，即使用{}把一段代码包住就可以了。</p>
+<blockquote>
+<p>Tip:块级作用域中的变量一般都是暴露的，使用上文提供的let就可以把变量锁定在该块中</p>
+</blockquote>
+<p>1.垃圾收集<br>在闭包中，一些不用的声明，并不会被立即的销毁，那么块作用域可以解决这个问题，为变量显式声明块作用域， 并对变量进行本地绑定。如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">process</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line"><span class="comment">// 在这里做点有趣的事情</span></span><br><span class="line">&#125; /</span><br><span class="line">/ 在这个块中定义的内容可以销毁了！</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">let</span> someReallyBigData = &#123; .. &#125;;</span><br><span class="line">process( someReallyBigData );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById( <span class="string">"my_button"</span> );</span><br><span class="line">btn.addEventListener( <span class="string">"click"</span>, <span class="function"><span class="keyword">function</span> <span class="title">click</span>(<span class="params">evt</span>)</span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"button clicked"</span>);</span><br><span class="line">&#125;, <span class="comment">/*capturingPhase=*/</span><span class="literal">false</span> );</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="提升-Hoisting"><a href="#提升-Hoisting" class="headerlink" title="提升 Hoisting"></a>提升 Hoisting</h2><p>提升：在函数执行过程中，会对变量及函数的声明进行提升，见下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(a);<span class="comment">//1 变量提升！</span></span><br><span class="line"><span class="keyword">var</span> a=<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">gaa();<span class="comment">//gaa 函数提升!</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">gaa</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"gaa"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">foo(); <span class="comment">// TypeError 这里提升失败，因为提升仅仅是编译阶段对“声明”的提升。而不产生赋值等操作。</span></span><br><span class="line">bar(); <span class="comment">// ReferenceError</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h2 id="作用域闭包-Scope-Closures"><a href="#作用域闭包-Scope-Closures" class="headerlink" title="作用域闭包 Scope Closures"></a>作用域闭包 Scope Closures</h2><p>理解闭包的前提之一是对上文所有的作用域有透彻的理解。</p>
+<h3 id="1分钟带你了解闭包"><a href="#1分钟带你了解闭包" class="headerlink" title="1分钟带你了解闭包"></a>1分钟带你了解闭包</h3><p>首先闭包是一个函数，其次是有权访问另一个函数作用域中的变量的函数。</p>
+<p>举个例子，看下图代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">2</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log( a );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> bar;<span class="comment">//bar就是闭包</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> baz = foo();</span><br><span class="line">baz(); <span class="comment">// 2 —— 朋友， 这就是闭包的效果</span></span><br></pre></td></tr></table></figure></p>
+<p>函数bar()就是闭包，它不仅可以访问自己的内部作用域，还可以访问foo()的作用域。</p>
+<h3 id="再来3分钟带你理解闭包"><a href="#再来3分钟带你理解闭包" class="headerlink" title="再来3分钟带你理解闭包"></a>再来3分钟带你理解闭包</h3><p>闭包的概念就是这么简单，但是！为什么还有很多人觉得闭包难呢，到底难在哪里呢。？<br>难就难在这个，闭包可以访问外部的作用域。<br>一旦可以访问外部的作用域，就相当于打开了魔盒。</p>
+<p>你想想，普通函数本身是无状态的(stateless),它们所使用的局部变量都是保存在函式调用栈（Stack）上，随着函式调用的结束、退出，这些临时保存在栈上的变量也就被清空了。</p>
+<p>可闭包函数不是这样的，由于它还要访问外部作用域，那么我们的编译器要为其保留执行时的上下文环境，或许要保留几个变量，或许保留几个函数。<br>由此可见，<strong>1.由于外部作用域的变化，闭包会是一个有状态的函数</strong>；<br>2.<strong>由于闭包可以对其他作用域的变量进行访问，与其说是函数，更类似于对象</strong>；</p>
+<h3 id="借助一个循环-闭包经典例子-进一步理解"><a href="#借助一个循环-闭包经典例子-进一步理解" class="headerlink" title="借助一个循环-闭包经典例子 进一步理解"></a>借助一个循环-闭包经典例子 进一步理解</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">1</span>; i&lt;=<span class="number">5</span>; i++) &#123;</span><br><span class="line">setTimeout( <span class="function"><span class="keyword">function</span> <span class="title">timer</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log( i );</span><br><span class="line">&#125;, i*<span class="number">1000</span> );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>错误理解：以每秒一次的频率分别输出1，2，3，4，5；<br>实际输出结果是：以每秒一次的频率输出五次6；<br>解析：延迟函数的参数i*1000正常，会在1，2…5秒后执行一次函数timer()，而timer()是一个闭包，它可以访问外部作用域的变量i，实际上，延迟函数的这五次执行，都访问同一个外部作用域的变量i，而循环结束时，i的值是6，那么每次延迟函数的执行，都打印的是6。<br>解决思路：不让闭包访问同一个外部作用域变量i，为每一次执行延迟函数，创造一个独立作用域。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//传统方法解决</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">1</span>; i&lt;=<span class="number">5</span>; i++) &#123;</span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">j</span>) </span>&#123;</span><br><span class="line">setTimeout( <span class="function"><span class="keyword">function</span> <span class="title">timer</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log( j );</span><br><span class="line">&#125;, j*<span class="number">1000</span> );</span><br><span class="line">&#125;)( i );</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//利用ES6特性解决</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i=<span class="number">1</span>; i&lt;=<span class="number">5</span>; i++) &#123;</span><br><span class="line">setTimeout( <span class="function"><span class="keyword">function</span> <span class="title">timer</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log( i );</span><br><span class="line">&#125;, i*<span class="number">1000</span> );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这下这段函数正常啦，<br>现在，你明白闭包了吗？</p>
+<h1 id="this和对象模型"><a href="#this和对象模型" class="headerlink" title="this和对象模型"></a>this和对象模型</h1><h2 id="this-or-that"><a href="#this-or-that" class="headerlink" title="this or that?"></a>this or that?</h2><h2 id="this全面解析"><a href="#this全面解析" class="headerlink" title="this全面解析"></a>this全面解析</h2><h2 id="对象-Objects"><a href="#对象-Objects" class="headerlink" title="对象 Objects"></a>对象 Objects</h2><h2 id="混合对象”类”-Mixing-Up-”Class”-Objects"><a href="#混合对象”类”-Mixing-Up-”Class”-Objects" class="headerlink" title="混合对象”类” Mixing(Up)”Class” Objects"></a>混合对象”类” Mixing(Up)”Class” Objects</h2><h2 id="原型-Prototypes"><a href="#原型-Prototypes" class="headerlink" title="原型 Prototypes"></a>原型 Prototypes</h2><h2 id="行为委托-Behaviour-Delegation"><a href="#行为委托-Behaviour-Delegation" class="headerlink" title="行为委托 Behaviour Delegation"></a>行为委托 Behaviour Delegation</h2><h2 id="ES6中的Class"><a href="#ES6中的Class" class="headerlink" title="ES6中的Class"></a>ES6中的Class</h2>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/23/hexo的各种骚操作（持续更新）/" rel="next" title="hexo的各种骚操作（持续更新）">
+                <i class="fa fa-chevron-left"></i> hexo的各种骚操作（持续更新）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="uyan_frame"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/weixin.png"
+                alt="江文" />
+            
+              <p class="site-author-name" itemprop="name">江文</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面的一些话"><span class="nav-number">1.</span> <span class="nav-text">写在前面的一些话</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JS引擎-Engine"><span class="nav-number">2.</span> <span class="nav-text">JS引擎 Engine</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript解析引擎与ECMAScript是什么关系"><span class="nav-number">2.1.</span> <span class="nav-text">JavaScript解析引擎与ECMAScript是什么关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js引擎的LHS和RHS动作"><span class="nav-number">2.2.</span> <span class="nav-text">js引擎的LHS和RHS动作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js编译器-Compiler"><span class="nav-number">2.3.</span> <span class="nav-text">js编译器 Compiler</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#作用域和闭包"><span class="nav-number">3.</span> <span class="nav-text">作用域和闭包</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#作用域定义"><span class="nav-number">3.1.</span> <span class="nav-text">作用域定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#作用域链"><span class="nav-number">3.1.1.</span> <span class="nav-text">作用域链</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#词法作用域-Lexical"><span class="nav-number">3.2.</span> <span class="nav-text">词法作用域 Lexical</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#欺骗词法"><span class="nav-number">3.2.1.</span> <span class="nav-text">欺骗词法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数作用域和块作用域-Function-vs-Block"><span class="nav-number">3.3.</span> <span class="nav-text">函数作用域和块作用域 Function vs. Block</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#函数作用域定义"><span class="nav-number">3.3.1.</span> <span class="nav-text">函数作用域定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隐藏内部实现"><span class="nav-number">3.3.2.</span> <span class="nav-text">隐藏内部实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#规避冲突"><span class="nav-number">3.3.3.</span> <span class="nav-text">规避冲突</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数作用域"><span class="nav-number">3.3.4.</span> <span class="nav-text">函数作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#立即执行函数表达式"><span class="nav-number">3.3.4.1.</span> <span class="nav-text">立即执行函数表达式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#匿名和具名"><span class="nav-number">3.3.4.2.</span> <span class="nav-text">匿名和具名</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#块作用域"><span class="nav-number">3.3.5.</span> <span class="nav-text">块作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#let"><span class="nav-number">3.3.5.1.</span> <span class="nav-text">let</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#块"><span class="nav-number">3.3.5.2.</span> <span class="nav-text">块{}</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提升-Hoisting"><span class="nav-number">3.4.</span> <span class="nav-text">提升 Hoisting</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作用域闭包-Scope-Closures"><span class="nav-number">3.5.</span> <span class="nav-text">作用域闭包 Scope Closures</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1分钟带你了解闭包"><span class="nav-number">3.5.1.</span> <span class="nav-text">1分钟带你了解闭包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#再来3分钟带你理解闭包"><span class="nav-number">3.5.2.</span> <span class="nav-text">再来3分钟带你理解闭包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#借助一个循环-闭包经典例子-进一步理解"><span class="nav-number">3.5.3.</span> <span class="nav-text">借助一个循环-闭包经典例子 进一步理解</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#this和对象模型"><span class="nav-number">4.</span> <span class="nav-text">this和对象模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#this-or-that"><span class="nav-number">4.1.</span> <span class="nav-text">this or that?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#this全面解析"><span class="nav-number">4.2.</span> <span class="nav-text">this全面解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象-Objects"><span class="nav-number">4.3.</span> <span class="nav-text">对象 Objects</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#混合对象”类”-Mixing-Up-”Class”-Objects"><span class="nav-number">4.4.</span> <span class="nav-text">混合对象”类” Mixing(Up)”Class” Objects</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原型-Prototypes"><span class="nav-number">4.5.</span> <span class="nav-text">原型 Prototypes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#行为委托-Behaviour-Delegation"><span class="nav-number">4.6.</span> <span class="nav-text">行为委托 Behaviour Delegation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ES6中的Class"><span class="nav-number">4.7.</span> <span class="nav-text">ES6中的Class</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">江文私人定制</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+    
+
+    
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2149564"></script>
+      <!-- UY END -->
+    
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("v4JE8i7TQTcxtnRnDueGcvHk-gzGzoHsz", "tRyDRGc9wFKp5a5zb5BTCar2");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
