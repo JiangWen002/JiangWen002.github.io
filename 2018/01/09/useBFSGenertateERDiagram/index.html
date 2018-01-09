@@ -82,15 +82,22 @@
 <meta name="description" content="图，作为现实世界中的一种抽象数学概念，在诸多领域发挥重要的作用。如：地图，网页信息，电路，任务调度，商业交易，配对，计算机网络，软件。本篇博文，就简单介绍下，图论中基础算法–广度优先搜索，在生成E-R关系图中的应用。">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="useBFSGenertateERDiagram">
+<meta property="og:title" content="广度优先搜索在生成E-R图中的应用">
 <meta property="og:url" content="http://www.jiangwen.site/2018/01/09/useBFSGenertateERDiagram/index.html">
 <meta property="og:site_name" content="Jiang Wen">
 <meta property="og:description" content="图，作为现实世界中的一种抽象数学概念，在诸多领域发挥重要的作用。如：地图，网页信息，电路，任务调度，商业交易，配对，计算机网络，软件。本篇博文，就简单介绍下，图论中基础算法–广度优先搜索，在生成E-R关系图中的应用。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-09T05:11:24.869Z">
+<meta property="og:image" content="http://www.jiangwen.site/2018/01/09/useBFSGenertateERDiagram/DG.png">
+<meta property="og:image" content="http://www.jiangwen.site/2018/01/09/useBFSGenertateERDiagram/BFS.gif">
+<meta property="og:image" content="http://www.jiangwen.site/2018/01/09/useBFSGenertateERDiagram/ER-4.png">
+<meta property="og:image" content="http://www.jiangwen.site/2018/01/09/useBFSGenertateERDiagram/ER-3.png">
+<meta property="og:image" content="http://www.jiangwen.site/2018/01/09/useBFSGenertateERDiagram/ER-2.png">
+<meta property="og:image" content="http://www.jiangwen.site/2018/01/09/useBFSGenertateERDiagram/ER-1.png">
+<meta property="og:updated_time" content="2018-01-09T15:35:20.802Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="useBFSGenertateERDiagram">
+<meta name="twitter:title" content="广度优先搜索在生成E-R图中的应用">
 <meta name="twitter:description" content="图，作为现实世界中的一种抽象数学概念，在诸多领域发挥重要的作用。如：地图，网页信息，电路，任务调度，商业交易，配对，计算机网络，软件。本篇博文，就简单介绍下，图论中基础算法–广度优先搜索，在生成E-R关系图中的应用。">
+<meta name="twitter:image" content="http://www.jiangwen.site/2018/01/09/useBFSGenertateERDiagram/DG.png">
 
 
 
@@ -126,7 +133,7 @@
 
 
 
-  <title>useBFSGenertateERDiagram | Jiang Wen</title>
+  <title>广度优先搜索在生成E-R图中的应用 | Jiang Wen</title>
   
 
 
@@ -280,7 +287,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">useBFSGenertateERDiagram</h2>
+          <h2 class="post-title" itemprop="name headline">广度优先搜索在生成E-R图中的应用</h2>
         
 
         <div class="post-meta">
@@ -343,7 +350,7 @@
 
           
           
-             <span id="/2018/01/09/useBFSGenertateERDiagram/" class="leancloud_visitors" data-flag-title="useBFSGenertateERDiagram">
+             <span id="/2018/01/09/useBFSGenertateERDiagram/" class="leancloud_visitors" data-flag-title="广度优先搜索在生成E-R图中的应用">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -376,8 +383,67 @@
       
         <blockquote class="blockquote-center"><p> 图，作为现实世界中的一种抽象数学概念，在诸多领域发挥重要的作用。如：地图，网页信息，电路，任务调度，商业交易，配对，计算机网络，软件。<br>本篇博文，就简单介绍下，图论中基础算法–广度优先搜索，在生成E-R关系图中的应用。 </p>
 </blockquote>
+<p><img src="/2018/01/09/useBFSGenertateERDiagram/DG.png" alt="有向图"></p>
 <a id="more"></a>
 <hr>
+<h1 id="福利网址"><a href="#福利网址" class="headerlink" title="福利网址"></a>福利网址</h1><blockquote>
+<p>开篇放个福利网址:<a href="https://visualgo.net/zh/dfsbfs" target="_blank" rel="noopener">https://visualgo.net/zh/dfsbfs</a> 一个算法可视化的网址，可以在线看各种算法的可视化，做的也越来越专业，还是非商业性质网站。理解不了抽象概念时，结合动画辅助理解。</p>
+</blockquote>
+<h1 id="为啥不使用深度优先搜索？"><a href="#为啥不使用深度优先搜索？" class="headerlink" title="为啥不使用深度优先搜索？"></a>为啥不使用深度优先搜索？</h1><p>在本例中，对搜索算法没有特殊要求，用深度优先搜索也是可以实现的，只是笔者凑巧使用了广度优先。<br>在一般情况下，深度优先搜索法占内存少但速度较慢，广度优先搜索算法占内存多但速度较快，在距离和深度成正比的情况下能较快地求出最优解。<br>BFS和DFS可能是知名度比较高的两种图搜索算法而已，实际上图搜索算法还有很多，能玩出不同的花样，所以理解算法并根据实际需要动态规划算法才是追求的方向。</p>
+<h1 id="广度优先搜索原理"><a href="#广度优先搜索原理" class="headerlink" title="广度优先搜索原理"></a>广度优先搜索原理</h1><h2 id="算法目的"><a href="#算法目的" class="headerlink" title="算法目的"></a>算法目的</h2><p>算法目的是系统地展开并检查图中的所有节点，以找寻结果。</p>
+<h2 id="算法思路伪实现"><a href="#算法思路伪实现" class="headerlink" title="算法思路伪实现"></a>算法思路伪实现</h2><p>动作1.从图中某一顶点o开始，遍历o所能到达的点集合C，判断集合C中点是否为已遍历状态，<strong>若不是</strong>执行动作2，并把该点压入一个用作循环动作的队列q中，<strong>若是</strong>则不做处理；</p>
+<p>动作2.把起点，和过程中已经遍历到的点，标记为已遍历状态；</p>
+<p>循环动作：从队列q中压出点o2,把o2作为起点，执行动作1；</p>
+<p>循环结束条件:队列q中无元素；</p>
+<p>结果:所有的节点都会被访问到；</p>
+<h2 id="算法可视化"><a href="#算法可视化" class="headerlink" title="算法可视化"></a>算法可视化</h2><p>如下动图所示，从顶点0开始，广度优先遍历所有节点：<br><img src="BFS.gif" alt="广度优先搜索可视化"></p>
+<h1 id="生成E-R图"><a href="#生成E-R图" class="headerlink" title="生成E-R图?"></a>生成E-R图?</h1><p><img src="ER-4.png" alt="选择渲染表"></p>
+<p>如图上所示，我们选择了其中4张表。<br>为此，提出以下三个问题：<br>问题1：任意给定N张表，如何显示这N张表之间的关联关系？<br>问题2：如何显示这N张表+这N张表的从属表之间，的关联关系？<br>问题3： 如何显示这N张表+从属表是这N张表的表，的关联关系？</p>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>E-R图本质上是有向图；</p>
+<h2 id="维护好表间关系"><a href="#维护好表间关系" class="headerlink" title="维护好表间关系"></a>维护好表间关系</h2><p>要想展示E-R关系，首先，维护好表间关系，具体怎么维护，自行决定，不是本文重点；</p>
+<h2 id="建立有向图的程序模型"><a href="#建立有向图的程序模型" class="headerlink" title="建立有向图的程序模型"></a>建立有向图的程序模型</h2><p>建立有向图的程序模型：<code>Map&lt;nodeString,List&lt;trailingEdge&gt;&gt;</code><br>这里图省事，就把关系整理为Map数据结构，key为节点值，value为该节点的出边（出边为算法中有向图的概念，出边标识了起始节点和终点节点）；</p>
+<h2 id="问题1：任意给定N张表，如何显示这N张表之间的关联关系"><a href="#问题1：任意给定N张表，如何显示这N张表之间的关联关系" class="headerlink" title="问题1：任意给定N张表，如何显示这N张表之间的关联关系"></a>问题1：任意给定N张表，如何显示这N张表之间的关联关系</h2><p>问题1的解决方法：不需要搜索，取出这N张表的关系模型<code>Map&lt;nodeString,List&lt;trailingEdge&gt;&gt;</code>，<br>遍历出边trailingEdge，trailingEdge的终点节点不在Map中的，删除掉这条出边，当遍历完整个模型Map后，仅剩下这N个节点和它们的出边，返回给前台展示即可。<br>这个比较简单，我就不贴代码了，直接看效果图：<br><img src="ER-3.png" alt="无渲染维度"><br>这里就选了四张需要渲染的表。</p>
+<h2 id="问题2：如何显示这N张表-这N张表的从属表之间，的关联关系"><a href="#问题2：如何显示这N张表-这N张表的从属表之间，的关联关系" class="headerlink" title="问题2：如何显示这N张表+这N张表的从属表之间，的关联关系"></a>问题2：如何显示这N张表+这N张表的从属表之间，的关联关系</h2><p>问题2的解决方法：如何显示这N张表+这N张表的从属表之间，的关联关系</p>
+<p>这个问题难在 如何寻找这N张表的从属表，比如选定表A，如何在所有表中，寻找到表A的子表a1,以及子表的子表a11等等。</p>
+<p>这就要在有向图中用广度优先搜索的方法，寻找到A表的子表，子子表。</p>
+<p>即：<strong>在有向图中，寻找到A表可以到达到的表</strong>！</p>
+<h3 id="核心算法代码"><a href="#核心算法代码" class="headerlink" title="核心算法代码"></a>核心算法代码</h3><pre><code class="javascript"><span class="comment">/**</span>
+<span class="comment"> * 广度优先搜索从一个图形数据结构Map中 判断 节点 a 与 b 之间是否存在路径</span>
+<span class="comment"> */</span>
+private boolean checkBFS(<span class="built_in">Map</span>&lt;<span class="built_in">String</span>,List&lt;HdipLinkData&gt;&gt; graphData, <span class="built_in">String</span> a,<span class="built_in">String</span> b) {
+    <span class="keyword">if</span> (a.equals(b)) {
+        <span class="keyword">return</span> <span class="literal">true</span>;
+    }
+    Queue&lt;<span class="built_in">String</span>&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();
+    <span class="comment">//用来标记是否访问过该节点</span>
+    HashMap&lt;<span class="built_in">String</span>, <span class="built_in">Boolean</span>&gt; visitedMap = <span class="keyword">new</span> HashMap&lt;&gt;();
+    visitedMap.put(a, <span class="literal">true</span>);
+    queue.offer(a);
+    <span class="keyword">while</span> (!queue.isEmpty()) {
+        <span class="built_in">String</span> node = queue.poll();<span class="comment">//从队列头部移除</span>
+        List&lt;HdipLinkData&gt; edgeNode = graphData.get(node);
+        <span class="keyword">if</span> (edgeNode.size()!=<span class="number">0</span>)
+        <span class="keyword">for</span> (HdipLinkData neighbor : edgeNode) {
+           <span class="built_in">String</span> nextNode = neighbor.getToTableName();
+            <span class="keyword">if</span> (!visitedMap.containsKey(nextNode)) {<span class="comment">//如果没访问过</span>
+                <span class="keyword">if</span> (nextNode.equals(b)) {
+                    <span class="keyword">return</span> <span class="literal">true</span>;
+                }
+                visitedMap.put(nextNode, <span class="literal">true</span>);
+                queue.offer(nextNode);
+            }
+        }
+    }
+<span class="keyword">return</span> <span class="literal">false</span>;
+}
+</code></pre>
+<p>如上，利用BFS算法，可以判断任意两个节点是否可以到达，是否连通。</p>
+<p>具体实现细节，伪代码思路如下：<br>数据库共M张表，<br>选定了N张表，<br>未判定表集合Z=(M-N);<br>遍历这集合N(n){<br>    遍历集合Z(z){<br>        checkBFS(n,z);//是否可达<br>    }<br>   获得 表n可以到达到的表集合L,<br>   那么Z=Z-L;<br>}<br>结束<br>获取目标表集合T = M-Z;<br>这个集合T就是我们的结果集合；<br>带着T 执行问题1的解决方法思路，返回结果给前台展示</p>
+<p>最终成果图如下，这里还是选择了上图中的那四张表：<br><img src="ER-2.png" alt="无渲染维度"></p>
+<h2 id="问题3：如何显示这N张表-从属表是这N张表的表，的关联关系"><a href="#问题3：如何显示这N张表-从属表是这N张表的表，的关联关系" class="headerlink" title="问题3：如何显示这N张表+从属表是这N张表的表，的关联关系"></a>问题3：如何显示这N张表+从属表是这N张表的表，的关联关系</h2><p>问题3实际上是问题2 的逆问题；</p>
+<p>即：<strong>在有向图中，寻找到A表可以到达到的表</strong>的逆命题–：<strong>在有向图中，寻找可以到达A表的表</strong>！<br>代码不贴了，思路一样的，只是某些操作反过来想而已；<br>最终成果图如下，这里还是选择了上图中的那四张表，跟问题2的结果有点类似，实际上是不一样的：<br><img src="ER-1.png" alt="无渲染维度"></p>
+<p>干货也不是特别多 讲的专业一点 主要就是那段核心代码 去<strong>判断有向图中的两点可达性</strong></p>
+<p>以上 谢谢阅读</p>
 
       
     </div>
@@ -473,8 +539,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -540,6 +615,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#福利网址"><span class="nav-number">1.</span> <span class="nav-text">福利网址</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#为啥不使用深度优先搜索？"><span class="nav-number">2.</span> <span class="nav-text">为啥不使用深度优先搜索？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#广度优先搜索原理"><span class="nav-number">3.</span> <span class="nav-text">广度优先搜索原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法目的"><span class="nav-number">3.1.</span> <span class="nav-text">算法目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法思路伪实现"><span class="nav-number">3.2.</span> <span class="nav-text">算法思路伪实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法可视化"><span class="nav-number">3.3.</span> <span class="nav-text">算法可视化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#生成E-R图"><span class="nav-number">4.</span> <span class="nav-text">生成E-R图?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分析"><span class="nav-number">5.</span> <span class="nav-text">分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#维护好表间关系"><span class="nav-number">5.1.</span> <span class="nav-text">维护好表间关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建立有向图的程序模型"><span class="nav-number">5.2.</span> <span class="nav-text">建立有向图的程序模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题1：任意给定N张表，如何显示这N张表之间的关联关系"><span class="nav-number">5.3.</span> <span class="nav-text">问题1：任意给定N张表，如何显示这N张表之间的关联关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题2：如何显示这N张表-这N张表的从属表之间，的关联关系"><span class="nav-number">5.4.</span> <span class="nav-text">问题2：如何显示这N张表+这N张表的从属表之间，的关联关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#核心算法代码"><span class="nav-number">5.4.1.</span> <span class="nav-text">核心算法代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题3：如何显示这N张表-从属表是这N张表的表，的关联关系"><span class="nav-number">5.5.</span> <span class="nav-text">问题3：如何显示这N张表+从属表是这N张表的表，的关联关系</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
